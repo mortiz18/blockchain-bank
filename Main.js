@@ -1,6 +1,8 @@
+/* Author: Michael Ortiz
+ * Updated: 03/21/18
+ */
 
 const SHA256 = require('crypto-js/sha256');
-
 
 class Account{
   constructor (accountNumber, name, balance){
@@ -85,9 +87,9 @@ let myCoin = new BlockChain();
 let myaccount = new Account("001", "First Account", 5);
 myCoin.addBlock(new Block(myaccount));
 
-// console.log(JSON.stringify(myCoin, null, 4));
+
+//For Testing
+console.log(JSON.stringify(myCoin, null, 4));
 console.log('Is chain valid?: ' + myCoin.isChainValid());
-
 myCoin.chain[1].Account.balance = 10;
-
 console.log('Is chain valid?: ' + myCoin.isChainValid());
